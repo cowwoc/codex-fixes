@@ -387,7 +387,6 @@ jobs:
   build-unix:
     needs:
       - prepare
-      - verify
     if: >-
       ${{
         needs.prepare.outputs.should_release == 'true' &&
@@ -818,7 +817,6 @@ jobs:
   build-windows-binaries:
     needs:
       - prepare
-      - verify
     if: >-
       ${{
         needs.prepare.outputs.should_release == 'true' &&
